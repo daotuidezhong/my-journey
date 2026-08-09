@@ -1,3 +1,8 @@
+//所以堆特别适合这种问题：
+//
+//元素不断增加、删除，但我又总想知道当前最大值 / 最小值。
+
+
 //#include<iostream>
 //using namespace std;
 //const int N = 1e6 + 10;

@@ -128,6 +128,8 @@
     <ClCompile Include="向下调整算法.cpp" />
     <ClCompile Include="堆的向上调整算法.cpp" />
     <ClCompile Include="堆的模拟实现.cpp" />
+    <ClCompile Include="牛客第K小问题.cpp" />
+    <ClCompile Include="牛客除2！问题.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

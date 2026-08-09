@@ -30,5 +30,11 @@
     <ClCompile Include="p3378模板堆.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="牛客第K小问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="牛客除2！问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
