@@ -36,5 +36,8 @@
     <ClCompile Include="牛客除2！问题.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="p2085最小函数值.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="p2085最小函数值.cpp" />
     <ClCompile Include="p3378模板堆.cpp" />
     <ClCompile Include="priority queue.cpp" />
     <ClCompile Include="向下调整算法.cpp" />
