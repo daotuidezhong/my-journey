@@ -5,6 +5,7 @@ typedef long long LL;
 const int N = 1e4 + 10;
 int a[N], b[N], c[N];
 int n, m;
+//做出小根堆
 struct node {
 	int f;//计算出的函数值
 	int num;//函数编号
@@ -13,13 +14,14 @@ struct node {
 		return f > x.f;
 	}
 };
+//计算函数值
 int calcu(int i, int x) {
 	return a[i] * x * x + b[i] * x + c[i];
 }
 int main() {
 	cin >> n >> m;
 	priority_queue<node> heap;
-	
+	//输入函数系数
 	for (int i = 1; i <= n; i++) {
 		cin >> a[i] >> b[i] >> c[i];
 	}
