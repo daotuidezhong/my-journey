@@ -123,6 +123,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="p1631序列合并.cpp" />
+    <ClCompile Include="p1878舞蹈课.cpp" />
     <ClCompile Include="p2085最小函数值.cpp" />
     <ClCompile Include="p3378模板堆.cpp" />
     <ClCompile Include="priority queue.cpp" />

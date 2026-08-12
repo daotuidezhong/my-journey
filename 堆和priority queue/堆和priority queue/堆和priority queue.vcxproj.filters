@@ -39,5 +39,11 @@
     <ClCompile Include="p2085最小函数值.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="p1631序列合并.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="p1878舞蹈课.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
