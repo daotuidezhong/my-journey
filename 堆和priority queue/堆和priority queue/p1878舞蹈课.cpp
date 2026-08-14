@@ -16,7 +16,7 @@ struct node {
 	bool operator <(const node& x) const {
 		if (d != x.d) return d > x.d;
 		else if (l != x.l) return l > x.l;
-		else if (r != x.r) return r > x.r;
+		else return r > x.r;
 	}
 };
 priority_queue<node>heap;
