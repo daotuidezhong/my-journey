@@ -66,78 +66,80 @@
 
 
 
-#include<iostream>
-#include<queue>
-#include<cmath>
-#include<vector>
-using namespace std;
-const int N = 2e5 + 10;
-int n;
-//存数据
-int e[N];
-
-//存前后节点
-int pre[N], ne[N];
-
-//存男生还是女生
-int s[N];
-
-//存是否出队
-int st[N];
-
-//用堆存储结构体
-struct node {
-	int d;//技术差
-	int l;//左编号
-	int r;//右编号
-	//使用小根堆存储
-	bool operator<(const node& x) const {
-		if (d != x.d) return d > x.d;
-		else if (l != x.d) return l > x.l;
-		return r > x.r;
-	}
-};
-
-//创建堆
-priority_queue<node> heap;
-int main() {
-	//读入数据
-	cin >> n;
-	for (int i = 1; i <= n; i++) {
-		char ch; cin >> ch;
-		if (ch == 'B') s[i] = 1;
-	}
-	for (int i = 1; i <= n; i++) {
-		cin >> e[i];
-		if ((s[i] == 1 && s[i + 1] == 0) || s[i] == 0 && s[i + 1] == 1)
-		{
-			heap.push({ abs(e[i + 1] - e[i]),i,i + 1 });
-		}
-
-	}
-	for (int i = 1; i <= n; i++) {
-		pre[i] = i - 1;
-		ne[i] = i + 1;
-	}
-	ne[n] = 0;
-	//取出数据
-	vector<node>ret;
-	while (heap.size()) {
-		auto t = heap.top(); heap.pop();
-		int d = t.d; int l = t.l; int r = t.r;
-		if (st[l] || st[r]) continue;
-		ret.push_back(t);
-		st[l] = st[r] = true;
-		ne[pre[l]] = ne[r];
-		pre[ne[r]] = pre[l];
-		int left = pre[l]; int right = ne[r];
-		if (left && right && s[left] != s[right]) {
-			heap.push({ abs(e[left] - e[right]),left,right });
-		}
-	}
-	cout << ret.size() << endl;
-	for (auto& x : ret) {
-		cout << x.l << " " << x.r << endl;
-	}
-	return 0;
-}
+//#include<iostream>
+//#include<queue>
+//#include<cmath>
+//#include<vector>
+//using namespace std;
+//const int N = 2e5 + 10;
+//int n;
+////存数据
+//int e[N];
+//
+////存前后节点
+//int pre[N], ne[N];
+//
+////存男生还是女生
+//int s[N];
+//
+////存是否出队
+//int st[N];
+//
+////用堆存储结构体
+//struct node {
+//	int d;//技术差
+//	int l;//左编号
+//	int r;//右编号
+//	//使用小根堆存储
+//	bool operator<(const node& x) const {
+//		if (d != x.d) return d > x.d;
+//		else if (l != x.d) return l > x.l;
+//		return r > x.r;
+//	}
+//};
+//
+////创建堆
+//priority_queue<node> heap;
+//int main() {
+//	//读入数据
+//	cin >> n;
+//	for (int i = 1; i <= n; i++) {
+//		char ch; cin >> ch;
+//		if (ch == 'B') s[i] = 1;
+//	}
+//	for (int i = 1; i <= n; i++) {
+//		cin >> e[i];
+//		pre[i] = i - 1;
+//		ne[i] = i + 1;
+//	}
+//	for (int i =2; i <= n; i++) {
+//		
+//		if (s[i-1]!=s[i])
+//		{
+//			heap.push({ abs(e[i -1] - e[i]),i-1,i });
+//		}
+//
+//	}
+//	
+//	ne[n] = 0;
+//	//取出数据
+//	vector<node>ret;
+//	while (heap.size()) {
+//		auto t = heap.top(); heap.pop();
+//		int d = t.d; int l = t.l; int r = t.r;
+//		if (st[l] || st[r]) continue;
+//		ret.push_back(t);
+//		st[l] = st[r] = true;
+//		ne[pre[l]] = ne[r];
+//		pre[ne[r]] = pre[l];
+//		int left = pre[l]; int right = ne[r];
+//		if (left && right && s[left] != s[right]) {
+//			heap.push({ abs(e[left] - e[right]),left,right });
+//		}
+//	}
+//	cout << ret.size() << endl;
+//	for (auto& x : ret) {
+//		cout << x.l << " " << x.r << endl;
+//	}
+//	return 0;
+//}
